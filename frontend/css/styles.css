@@ -1,0 +1,309 @@
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --primary: #1f6feb;
+  --primary-dark: #1549a6;
+  --text: #1a2433;
+  --muted: #58657a;
+  --border: #e5eaf2;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.topbar {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  padding: 72px 0 36px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  background: #e7f0ff;
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.6;
+}
+
+.cta-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.hero-card ul {
+  margin: 18px 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.mini-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.mini-stats div {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #f8fbff;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding-bottom: 48px;
+}
+
+.page-shell {
+  padding: 40px 0 80px;
+}
+
+.form-card {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+#predict-form {
+  display: grid;
+  gap: 16px;
+}
+
+#image-input {
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  background: #f8fbff;
+}
+
+.camera-box {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+#camera-preview {
+  width: 100%;
+  max-height: 420px;
+  border-radius: 16px;
+  background: #0f172a;
+}
+
+.result-box {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  background: #f9fbff;
+}
+
+#uploaded-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.result-body {
+  display: grid;
+  gap: 8px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  display: grid;
+  gap: 10px;
+  text-align: center;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.stat-card strong {
+  font-size: 1.5rem;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.history-list {
+  display: grid;
+  gap: 12px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #f9fbff;
+}
+
+.history-title {
+  display: block;
+  font-weight: 700;
+}
+
+.badge-pill {
+  display: inline-block;
+  background: #e7f0ff;
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-weight: 700;
+}
+
+.empty-state {
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  color: var(--muted);
+  background: #fafcff;
+}
+
+.model-status {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .hero,
+  .section-grid,
+  .result-box,
+  .stats-grid,
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    display: none;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | AI FreshCheck</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">AI FreshCheck</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="predict.html">Predict</a>
+        <a href="history.html">History</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="model.html">Model</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="stats-grid">
+      <div class="card stat-card"><span>Total predictions</span><strong id="total-predictions">0</strong></div>
+      <div class="card stat-card"><span>Fresh</span><strong id="fresh-count">0</strong></div>
+      <div class="card stat-card"><span>Moderately Fresh</span><strong id="moderate-count">0</strong></div>
+      <div class="card stat-card"><span>Rotten</span><strong id="rotten-count">0</strong></div>
+      <div class="card stat-card"><span>Unknown</span><strong id="unknown-count">0</strong></div>
+      <div class="card stat-card"><span>Average confidence</span><strong id="avg-confidence">0%</strong></div>
+    </section>
+
+    <section class="chart-grid">
+      <div class="card"><canvas id="freshnessChart"></canvas></div>
+      <div class="card"><canvas id="categoryChart"></canvas></div>
+      <div class="card"><canvas id="confidenceChart"></canvas></div>
+      <div class="card"><canvas id="activityChart"></canvas></div>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

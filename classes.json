@@ -1,0 +1,18 @@
+{
+  "version": "v1.0",
+  "labels": {
+    "0": "apple",
+    "1": "banana"
+  },
+  "supported_classes": [
+    "apple",
+    "banana"
+  ],
+  "class_count": 2,
+  "unknown_label": "Unknown",
+  "freshness_classes": [
+    "Fresh",
+    "Moderately Fresh",
+    "Rotten"
+  ]
+}
