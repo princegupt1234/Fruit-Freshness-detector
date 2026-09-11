@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Universal Fruit & Vegetable Freshness Detection System
 
 This project is being built in stages, following the requirement specification for a production-style AI freshness detection application.
@@ -115,3 +116,6 @@ CREATE TABLE predictions (
 ## Stage 1 status
 
 This stage establishes the project architecture and scaffold. The next stage will implement dataset validation and preprocessing.
+=======
+# Fruit-Freshness-detector
+>>>>>>> 071b58945478a69608e24ee45094cfbbbc8d353a
